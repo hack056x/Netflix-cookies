@@ -10,4 +10,8 @@ te mostrara la cookies activa y valida donde puede descargar.
 
 <img width="1081" height="651" alt="image" src="https://github.com/user-attachments/assets/dd8e6b2f-d50c-43f3-a107-e4a3173b37b9" />
 
+
+puede visitar esta web para probar como funciona https://hackapp.ct.ws/cookies/
+
+
 By @hacker056
