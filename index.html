@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Starblack Cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 Team Starblack Cookies</h1>
+            <p>Checker Cookies de Netflix</p>
+            <p>By @hacker056</p>
+        </div>
+        
+        <div class="grid">
+            <!-- Panel izquierdo -->
+            <div>
+                <div class="card">
+                    <h3>📁 Archivos</h3>
+                    <div class="file-drop" id="fileDrop">
+                        📂 Arrastra archivos .txt aquí o haz click
+                        <input type="file" id="fileInput" multiple accept=".txt" style="display: none;">
+                    </div>
+                    <div id="fileList" class="file-list"></div>
+                    <button class="btn btn-primary" id="startBtn">▶ INICIAR</button>
+                    <button class="btn btn-secondary" id="clearBtn">🗑 LIMPIAR</button>
+                </div>
+                
+                <div class="card">
+                    <h3>⚙️ Configuración</h3>
+                    <div class="config-group">
+                        <label>API URL:</label>
+                        <input type="text" id="apiUrl" value="api.php" class="config-input">
+                    </div>
+                    <div class="config-group">
+                        <label>Tiempos:</label>
+                        <input type="number" id="timeout" value="20" min="5" max="60" class="config-input">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel derecho -->
+            <div>
+                <div class="card">
+                    <h3>📊 Estadísticas</h3>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-label">Total</div>
+                            <div class="stat-number" id="total">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">✅ Válidas</div>
+                            <div class="stat-number" id="validas">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">❌ Inválidas</div>
+                            <div class="stat-number" id="invalidas">0</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress" class="progress-fill">0%</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="search-container">
+                        <input type="text" id="search" class="search-input" placeholder="🔍 Buscar por email o plan...">
+                        <select id="filterStatus" class="filter-select">
+                            <option value="all">Todos los estados</option>
+                            <option value="ACTIVA">✅ Activas</option>
+                            <option value="INVALIDA">❌ Inválidas</option>
+                            <option value="INACTIVA">⚠️ Inactivas</option>
+                        </select>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr><th>Email</th><th>Plan</th><th>País</th><th>Estado</th><th width="80">Acción</th></tr>
+                            </thead>
+                            <tbody id="results"></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>📝 Actividad</h3>
+                    <div id="log" class="log-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
